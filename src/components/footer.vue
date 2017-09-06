@@ -30,28 +30,25 @@
       font-size: 12px;
 
       &.home {
-        background: url("/static/images/icon-home.png") no-repeat center top/22px auto;
+        background: url("../common/image/icon-home.png") no-repeat center top/19px auto;
       }
       &.home.active {
-        background: url("/static/images/icon-home-active.png") no-repeat center top/22px auto;
+        background: url("../common/image/icon-home-active.png") no-repeat center top/19px auto;
       }
 
       &.classify {
-        background: url("/static/images/icon-classify.png") no-repeat center top/22px auto;
+        background: url("../common/image/icon-category.png") no-repeat center top/19px auto;
       }
       &.classify.active {
-        background: url("/static/images/icon-classify-active.png") no-repeat center top/22px auto;
+        background: url("../common/image/icon-category-active.png") no-repeat center top/19px auto;
       }
 
       &.cart {
-        background: url("/static/images/icon-cart.png") no-repeat center top/22px auto;
+        background: url("../common/image/icon-cart.png") no-repeat center top/19px auto;
       }
 
       &.my {
-        background: url("/static/images/icon-my.png") no-repeat center top/22px auto;
-      }
-      &.my.active {
-        background: url("/static/images/icon-my-active.png") no-repeat center top/22px auto;
+        background: url("../common/image/icon-my.png") no-repeat center top/19px auto;
       }
 
       &.active {
