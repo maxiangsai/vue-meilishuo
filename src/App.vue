@@ -7,7 +7,6 @@
 
 <script>
   import vFooter from 'components/footer'
-  import { mapActions } from 'vuex'
   export default {
     name: 'app',
     data () {
@@ -20,10 +19,10 @@
       vFooter
     },
     methods: {
-      ...mapActions(['handleLogin'])
+
     },
     mounted () {
-      this.$store.dispatch('handleLogin')
+
     }
   }
 </script>

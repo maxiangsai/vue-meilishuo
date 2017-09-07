@@ -1,20 +1,61 @@
 <template>
   <div>
     <search-bar></search-bar>
-    <!-- swipe -->
+    <!-- swipe banner-->
     <div class="slider">
+      <img :src="banner" alt="">
     </div>
-    <!-- /swipe -->
+    <!-- /swipe banner-->
+
+    <slide-box :list="slideList"></slide-box>
+
+    <!-- 超值拼团 -->
+    <recommend :list="recommendList"></recommend>
+    <!-- /超值拼团 -->
   </div>
 </template>
 <script type="text/ecmascript-6">
   import searchBar from 'components/searchBar'
+  import slideBox from 'components/slideBox'
+  import recommend from 'components/recommend'
+  import { getSliderBanner, getSlideList, getRecommend } from 'api/slider'
+
   export default {
     data () {
-      return {}
+      return {
+        banner: '',
+        slideList: [],
+        wholesaleList: [],
+        recommendList: []
+      }
     },
     components: {
-      searchBar
+      searchBar,
+      slideBox,
+      recommend
+    },
+    created () {
+      this._getSliderBanner()
+      this._getSlideBox()
+      this._getRecommend()
+    },
+    methods: {
+      _getSliderBanner() {
+        getSliderBanner().then((res) => {
+          let list = res.data['43542'].list
+          this.banner = list[2].image
+        })
+      },
+      _getSlideBox () {
+        getSlideList().then((res) => {
+            this.slideList = res.data['13730'].list
+        })
+      },
+      _getRecommend () {
+        getRecommend().then((res) => {
+            this.recommendList = res.data.list
+        })
+      }
     }
   }
 

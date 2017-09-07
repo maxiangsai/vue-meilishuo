@@ -14,3 +14,8 @@ body {
 img {
   max-width: 100%;
 }
+
+.view *, .view ::after, .view ::before {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  -webkit-user-drag: none;
+}
