@@ -3,12 +3,14 @@
     <h2><span class="title">推荐精选</span></h2>
     <ul>
       <li v-for="item in list">
-        <div class="image-wrap">
-          <div class="leftBottom_tagImg">
-            <img :src="item.leftbottom_taglist" width="36">
+        <router-link :to="{ name: 'Detail', params: { id: item.shopId } }">
+          <div class="image-wrap">
+            <div class="leftBottom_tagImg">
+              <img :src="item.leftbottom_taglist" width="36">
+            </div>
+            <img :src="item.show.img">
           </div>
-          <img :src="item.show.img">
-        </div>
+        </router-link>
         <p class="title">{{ item.title }}</p>
         <div class="goods_info">
           <span class="price">{{ item.price }}</span>

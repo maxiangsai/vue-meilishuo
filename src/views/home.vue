@@ -48,12 +48,12 @@
       },
       _getSlideBox () {
         getSlideList().then((res) => {
-            this.slideList = res.data['13730'].list
+          this.slideList = res.data['13730'].list
         })
       },
       _getRecommend () {
         getRecommend().then((res) => {
-            this.recommendList = res.data.list
+          this.recommendList = res.data.list
           console.log(this.recommendList)
         })
       }
