@@ -54,6 +54,7 @@
       _getRecommend () {
         getRecommend().then((res) => {
             this.recommendList = res.data.list
+          console.log(this.recommendList)
         })
       }
     }

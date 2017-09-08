@@ -22,20 +22,26 @@
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
   .box-wrap {
-    padding: 10px 5px;
-    overflow-scrolling: touch;
+    padding: 15px 5px;
+    -webkit-overflow-scrolling: touch;
     overflow: auto;
     > ul {
       overflow-y: hidden;
       overflow-x: scroll;
-      overflow-scrolling: touch;
+      -webkit-overflow-scrolling: touch;
       white-space: nowrap;
       display: flex;
       li {
         flex: 1 0 25%;
         text-align: center;
+      }
+    }
+
+    @at-root {
+      .imageBox {
+        margin-bottom: 5px;
         img {
-          width: 90%;
+          width: 88%;
         }
       }
     }

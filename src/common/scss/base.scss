@@ -1,20 +1,25 @@
 @import "./variable";
-html, body {
-  height: 100%;
-}
 html {
   font-size: 14px;
 }
+
 body {
   background-color: $color-white;
   color: $color-font-black;
-  font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+  font-family: "Helvetica Neue", -apple-system, "PingFang SC", sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
+.box-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.box-wrap::-webkit-scrollbar-thumb:horizontal {
+  display: none;
+}
 .view *, .view ::after, .view ::before {
   -webkit-tap-highlight-color: rgba(255,255,255,0);
   -webkit-user-drag: none;

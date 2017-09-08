@@ -11,7 +11,8 @@
         </div>
         <p class="title">{{ item.title }}</p>
         <div class="goods_info">
-
+          <span class="price">{{ item.price }}</span>
+          <div class="star">{{ item.cfav }}</div>
         </div>
       </li>
     </ul>
@@ -30,10 +31,52 @@
   }
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
+  @import "../common/scss/variable";
   .recommend {
-    padding: 15px 0;
+    padding:0 0 15px;
+    overflow: hidden;
+
+    @at-root {
+      .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 10px 0;
+        font-size: 0.8em;
+      }
+      .image-wrap {
+        position: relative;
+        padding-bottom: 130%;
+        height: 0;
+        overflow: hidden;
+        img {
+          animation: fadeIn .4s ease both 0s;
+        }
+        .leftBottom_tagImg {
+          position: absolute;
+          left: 5px;
+          bottom: 0;
+          > img {
+            display: block;
+          }
+        }
+      }
+      .goods_info {
+        display: flex;
+        .price {
+          color: $color-primary;
+          margin-right: 15px;
+        }
+        .star {
+          padding-left: 18px;
+          background: url("../common/image/icon-star.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+
     h2 {
-      padding: 10px 2%;
+      padding: 0 2% 10px;
       font-size: 16px;
     }
     ul {
@@ -41,27 +84,6 @@
         float: left;
         width: 46%;
         margin: 0 2% 20px;
-      }
-    }
-    .title {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding: 10px 0;
-    }
-    .image-wrap {
-      position: relative;
-      padding-bottom: 130%;
-      height: 0;
-      overflow: hidden;
-
-      .leftBottom_tagImg {
-        position: absolute;
-        left: 5px;
-        bottom: 0;
-        > img {
-          display: block;
-        }
       }
     }
   }
