@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view class="view"></router-view>
+    <keep-alive>
+      <router-view class="view"></router-view>
+    </keep-alive>
     <v-footer></v-footer>
   </div>
 </template>
@@ -10,19 +12,10 @@
   export default {
     name: 'app',
     data () {
-      return {
-        title: '首页',
-        menuIcon: 'icon-menu.png'
-      }
+      return {}
     },
     components: {
       vFooter
-    },
-    methods: {
-
-    },
-    mounted () {
-
     }
   }
 </script>
@@ -32,5 +25,4 @@
     max-width: 750px;
     margin: 0 auto;
   }
-
 </style>

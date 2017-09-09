@@ -9,9 +9,9 @@
 
     <slide-box :list="slideList"></slide-box>
 
-    <!-- 超值拼团 -->
-    <recommend :list="recommendList"></recommend>
-    <!-- /超值拼团 -->
+    <!-- 精选推荐 -->
+    <recommend :list="recommendList" @select="selectItem"></recommend>
+    <!-- /精选推荐 -->
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -20,6 +20,7 @@
   import recommend from 'components/recommend'
   import { getSliderBanner, getSlideList, getRecommend } from 'api/slider'
 
+  import { mapMutations } from 'vuex'
   export default {
     data () {
       return {
@@ -40,6 +41,7 @@
       this._getRecommend()
     },
     methods: {
+      ...mapMutations(['SET_GOODS']),
       _getSliderBanner() {
         getSliderBanner().then((res) => {
           let list = res.data['43542'].list
@@ -56,6 +58,12 @@
           this.recommendList = res.data.list
           console.log(this.recommendList)
         })
+      },
+      selectItem (goods) {
+        this.$router.push({
+          path: `/detail/${ goods.shopId }`
+        })
+        this.SET_GOODS(goods)
       }
     }
   }

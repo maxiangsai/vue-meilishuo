@@ -24,9 +24,9 @@
   .box-wrap {
     padding: 15px 5px;
     -webkit-overflow-scrolling: touch;
-    overflow: auto;
+    overflow: hidden;
     > ul {
-      overflow-y: hidden;
+      overflow: hidden;
       overflow-x: scroll;
       -webkit-overflow-scrolling: touch;
       white-space: nowrap;
