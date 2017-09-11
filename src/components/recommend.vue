@@ -33,9 +33,11 @@
 <style scoped lang="scss" rel="stylesheet/scss">
   @import "../common/scss/variable";
   .recommend {
-    padding:0 0 15px;
     overflow: hidden;
-
+    ul {
+      overflow: hidden;
+      background-color: #fff;
+    }
     @at-root {
       .title {
         white-space: nowrap;

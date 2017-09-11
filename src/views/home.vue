@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap-hasFooter">
     <search-bar></search-bar>
     <!-- swipe banner-->
     <div class="slider">
@@ -12,13 +12,17 @@
     <!-- 精选推荐 -->
     <recommend :list="recommendList" @select="selectItem"></recommend>
     <!-- /精选推荐 -->
+
+    <v-footer></v-footer>
   </div>
 </template>
 <script type="text/ecmascript-6">
   import searchBar from 'components/searchBar'
   import slideBox from 'components/slideBox'
   import recommend from 'components/recommend'
-  import { getSliderBanner, getSlideList, getRecommend } from 'api/slider'
+  import vFooter from 'components/footer'
+  import { getSliderBanner, getSlideList } from 'api/slider'
+  import getRecommend from 'api/recommend'
 
   import { mapMutations } from 'vuex'
   export default {
@@ -33,7 +37,8 @@
     components: {
       searchBar,
       slideBox,
-      recommend
+      recommend,
+      vFooter
     },
     created () {
       this._getSliderBanner()
@@ -56,7 +61,6 @@
       _getRecommend () {
         getRecommend().then((res) => {
           this.recommendList = res.data.list
-          console.log(this.recommendList)
         })
       },
       selectItem (goods) {
@@ -70,6 +74,9 @@
 
 </script>
 <style scoped lang="scss" rel="stylesheet/scss">
+  .wrap-hasFooter {
+    padding-bottom: 46px;
+  }
   .slider {
     position: relative;
     max-width: 750px;

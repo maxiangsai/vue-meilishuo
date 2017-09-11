@@ -15,10 +15,13 @@
         <i class="arrowRight"></i>
       </li>
     </ul>
+    <v-footer></v-footer>
   </div>
 </template>
-<script>
+<script type="text/ecmascript-6">
+  import vFooter from 'components/footer'
   export default {
+    name: 'my',
     data () {
       return {
         user: {
@@ -39,6 +42,9 @@
           }]
         ]
       }
+    },
+    components: {
+      vFooter
     }
   }
 </script>

@@ -3,19 +3,15 @@
     <keep-alive>
       <router-view class="view"></router-view>
     </keep-alive>
-    <v-footer></v-footer>
   </div>
 </template>
 
-<script>
-  import vFooter from 'components/footer'
+<script type="text/ecmascript-6">
+
   export default {
     name: 'app',
     data () {
       return {}
-    },
-    components: {
-      vFooter
     }
   }
 </script>

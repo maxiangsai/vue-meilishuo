@@ -1,8 +1,8 @@
 <template>
   <footer class="tabBar">
     <router-link to="/home" class="home">首页</router-link>
-    <router-link to="/notice" class="classify">分类</router-link>
-    <router-link to="/download" class="cart">购物车</router-link>
+    <router-link to="/category" class="category">分类</router-link>
+    <router-link to="/cart" class="cart">购物车</router-link>
     <router-link to="/my" class="my">我的</router-link>
   </footer>
 </template>
@@ -36,19 +36,25 @@
         background: url("../common/image/icon-home-active.png") no-repeat center top/19px auto;
       }
 
-      &.classify {
+      &.category {
         background: url("../common/image/icon-category.png") no-repeat center top/19px auto;
       }
-      &.classify.active {
+      &.category.active {
         background: url("../common/image/icon-category-active.png") no-repeat center top/19px auto;
       }
 
       &.cart {
         background: url("../common/image/icon-cart.png") no-repeat center top/19px auto;
       }
+      &.cart.active {
+        background: url("../common/image/icon-cart-active.png") no-repeat center top/19px auto;
+      }
 
       &.my {
         background: url("../common/image/icon-my.png") no-repeat center top/19px auto;
+      }
+      &.my.active {
+        background: url("../common/image/icon-my-active.png") no-repeat center top/19px auto;
       }
 
       &.active {

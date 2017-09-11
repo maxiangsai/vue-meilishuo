@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/home'
+import Category from '@/views/category'
+import Cart from '@/views/cart'
 import My from '@/views/my'
 import Detail from '@/views/detail'
 
@@ -13,6 +15,16 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/category',
+      name: 'Category',
+      component: Category
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart
     },
     {
       path: '/my',
