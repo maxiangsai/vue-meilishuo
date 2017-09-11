@@ -1,15 +1,20 @@
 <template>
   <div id="detailFooter" class="footerBar">
-    <div class="price">{{ goodsPrice }}</div>
+    <div class="price">{{ goodsPrice }}元</div>
 
     <div class="addToCart">加入购物车</div>
-    <div class="buy-now">购买</div>
+    <div class="buy-now" @click="buyNow">购买</div>
   </div>
 </template>
 <script type="text/ecmascript-6">
   export default {
     props: {
       goodsPrice: String
+    },
+    methods: {
+      buyNow () {
+        this.$emit('buyNow')
+      }
     }
   }
 </script>
@@ -48,5 +53,4 @@
       }
     }
   }
-
 </style>
