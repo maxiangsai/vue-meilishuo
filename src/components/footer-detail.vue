@@ -40,7 +40,7 @@
       }
 
       .addToCart {
-        flex: 0.6;
+        flex: 0.8;
 
         color: $color-font-black;
         background-color: $color-yellow;

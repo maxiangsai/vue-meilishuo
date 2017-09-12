@@ -13,11 +13,7 @@ img {
   max-width: 100%;
 }
 
-.box-wrap::-webkit-scrollbar {
-  display: none;
-}
-
-.box-wrap::-webkit-scrollbar-thumb:horizontal {
+.box-wrap::-webkit-scrollbar, .box-wrap ul::-webkit-scrollbar {
   display: none;
 }
 

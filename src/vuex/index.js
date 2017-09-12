@@ -4,6 +4,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import goods from './modules/goods'
+import cart from './modules/cart'
 
 import * as actions from './actions'
 
@@ -14,7 +15,8 @@ const debug = process.env.NODE_ENV !== 'production'
 export default new Vuex.Store({
   actions,
   modules: {
-    goods
+    goods,
+    cart
   },
   strict: debug
 })
